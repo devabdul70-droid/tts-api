@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tts-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: CORS_ORIGINS
+        value: '["*"]'
+    healthCheckPath: /health
